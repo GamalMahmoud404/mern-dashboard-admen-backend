@@ -15,11 +15,9 @@ const UserModel = require("./models/Users")
 
 // connect to DB
 
-const userName = process.env.USERNAME
-const PASSWORD = process.env.PASSWORD
-const DATABASE = process.env.DATABASE
+const MONGO_URI = process.env.MONGO_URI;
 
-mongoose.connect(`mongodb+srv://${userName}:${PASSWORD}@cluster0.80esnh2.mongodb.net/${DATABASE}?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(MONGO_URI)
 
 
 // import user model
