@@ -17,7 +17,7 @@ const UserModel = require("./models/Users")
 
 const MONGO_URI = process.env.MONGO_URI;
 
-mongoose.connect(`MONGO_URI`)
+mongoose.connect(MONGO_URI)
 
 
 // import user model
